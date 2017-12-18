@@ -2,7 +2,6 @@ class CreateGameboards < ActiveRecord::Migration[5.1]
   def change
     create_table :gameboards do |t|
       t.integer :slots
-      t.boolean :complete
       t.string :winner
       t.string :player_one
       t.string :player_two

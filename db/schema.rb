@@ -14,18 +14,17 @@ ActiveRecord::Schema.define(version: 20171217214429) do
 
   create_table "gameboards", force: :cascade do |t|
     t.integer "slots"
-    t.boolean "complete"
     t.string "winner"
     t.string "player_one"
     t.string "player_two"
+    t.integer "player_turn", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "pieces", force: :cascade do |t|
     t.string "owner"
-    t.integer "xposition"
-    t.integer "yposition"
+    t.integer "position"
     t.integer "gameboard_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

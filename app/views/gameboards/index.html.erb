@@ -3,11 +3,10 @@
 <ul>
   <% @gameBoards.each do |gb| %>
   <li>ID: <%= gb.id %></li>
-  <li>Game Complete: <%= gb.complete%></li>
   <li>Player One:<%= gb.player_one%></li>
   <li>Player Two: <%= gb.player_two%></li>
   <li>Game Winner: <%= gb.winner %></li>
   <% end %>
 </ul>
 
-<%= link_to 'Create a Game', new_gameboard_path(@gameBoard) %>
+<%= link_to 'Start a new Game', new_gameboard_path(@gameBoard) %>

@@ -23,14 +23,6 @@ class GameboardsController < ApplicationController
 
   end
 
-  def switch_turn
-    @gameBoard = Gameboard.find_by_id(params[:id])
-    if @gameBoard.player_turn == 1
-      @gameBoard.player_turn = 2
-    else
-      @gameBoard.player_turn = 1
-    end
-    @gameBoard.save
-  end
+
 
 end

@@ -1,0 +1,6 @@
+<h1> New Game</h1>
+<%= form_tag new_gameboard_path do %>
+Player One: <%= text_field_tag :'gameboard[player_one]' %><br />
+Player Two: <%= text_field_tag :'gameboard[player_two]' %><br />
+<%= submit_tag "Submit Post" %>
+<% end %>

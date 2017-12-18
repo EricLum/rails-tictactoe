@@ -1,0 +1,80 @@
+<h1>TIC-TAC-TOE</h1>
+<h2><%= @gameBoard.player_one%> vs. <%= @gameBoard.player_two %> </h2>
+<h3>It is currently player one's turn </h3>
+<style>
+td {
+border: 1px solid black;
+height: 50px;
+width: 50px;
+}
+</style>
+<table>
+    <tr>
+        <td><%= form_tag create_piece_path do %>
+          <%= hidden_field_tag :'gameboard[id]',  @gameBoard.id%>
+          <%= hidden_field_tag :'piece[xposition]', 0%>
+          <%= hidden_field_tag :'piece[yposition]', 0 %>
+          <%= submit_tag "Place Piece" %>
+          <% end %>
+        </td>
+        <td><%= form_tag create_piece_path do %>
+          <%= hidden_field_tag :'gameboard[id]',  @gameBoard.id%>
+          <%= hidden_field_tag :'piece[xposition]', 1%>
+          <%= hidden_field_tag :'piece[yposition]', 0 %>
+          <%= submit_tag "Place Piece" %>
+          <% end %>
+        </td>
+        <td><%= form_tag create_piece_path do %>
+          <%= hidden_field_tag :'gameboard[id]',  @gameBoard.id%>
+          <%= hidden_field_tag :'piece[xposition]', 2%>
+          <%= hidden_field_tag :'piece[yposition]', 0 %>
+          <%= submit_tag "Place Piece" %>
+          <% end %></td>
+    </tr>
+    <tr>
+        <td><%= form_tag create_piece_path do %>
+          <%= hidden_field_tag :'gameboard[id]',  @gameBoard.id%>
+          <%= hidden_field_tag :'piece[xposition]', 0%>
+          <%= hidden_field_tag :'piece[yposition]', 1 %>
+          <%= submit_tag "Place Piece" %>
+          <% end %>
+        </td>
+        <td><%= form_tag create_piece_path do %>
+          <%= hidden_field_tag :'gameboard[id]',  @gameBoard.id%>
+          <%= hidden_field_tag :'piece[xposition]', 1%>
+          <%= hidden_field_tag :'piece[yposition]', 1 %>
+          <%= submit_tag "Place Piece" %>
+          <% end %>
+        </td>
+        <td><%= form_tag create_piece_path do %>
+          <%= hidden_field_tag :'gameboard[id]',  @gameBoard.id%>
+          <%= hidden_field_tag :'piece[xposition]', 2%>
+          <%= hidden_field_tag :'piece[yposition]', 1 %>
+          <%= submit_tag "Place Piece" %>
+          <% end %>
+        </td>
+    </tr>
+    <tr>
+        <td><%= form_tag create_piece_path do %>
+          <%= hidden_field_tag :'gameboard[id]',  @gameBoard.id%>
+          <%= hidden_field_tag :'piece[xposition]', 0%>
+          <%= hidden_field_tag :'piece[yposition]', 2 %>
+          <%= submit_tag "Place Piece" %>
+          <% end %>
+        </td>
+        <td><%= form_tag create_piece_path do %>
+          <%= hidden_field_tag :'gameboard[id]',  @gameBoard.id%>
+          <%= hidden_field_tag :'piece[xposition]', 1%>
+          <%= hidden_field_tag :'piece[yposition]', 2 %>
+          <%= submit_tag "Place Piece" %>
+          <% end %>
+        </td>
+        <td><%= form_tag create_piece_path do %>
+          <%= hidden_field_tag :'gameboard[id]',  @gameBoard.id%>
+          <%= hidden_field_tag :'piece[xposition]', 2%>
+          <%= hidden_field_tag :'piece[yposition]', 2 %>
+          <%= submit_tag "Place Piece" %>
+          <% end %>
+        </td>
+    </tr>
+</table>

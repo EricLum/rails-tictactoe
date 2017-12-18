@@ -2,7 +2,7 @@
 
 <ul>
   <% @gameBoards.each do |gb| %>
-  <li>ID: <%= gb.id %></li>
+  <li>ID: <%=link_to gb.id, gameboard_path(gb.id) %></li>
   <li>Player One:<%= gb.player_one%></li>
   <li>Player Two: <%= gb.player_two%></li>
   <li>Game Winner: <%= gb.winner %></li>

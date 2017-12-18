@@ -1,6 +1,9 @@
 <h1>TIC-TAC-TOE</h1>
 <h2><%= @gameBoard.player_one%> vs. <%= @gameBoard.player_two %> </h2>
 <h3>It is currently <%= @gameBoard.player_to_turn %>'s turn </h3>
+<% if @gameBoard.game_won? %>
+<h1><%= @gameBoard.winner %> is the winner </h1>
+<% end %>
 <style>
 td {
 border: 1px solid black;

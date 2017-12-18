@@ -22,7 +22,18 @@ class Gameboard < ApplicationRecord
     player_one_pieces = self.pieces.where(owner: self.player_one)
     player_two_pieces = self.pieces.where(owner: self.player_two)
 
-    if player_one_pieces.where
+  
+    if player_one_pieces.where(position: [0,1,2]).count == 3
+      self.winner = self.player_one
+      return true
+    end
+
+    if player_two_pieces.where(position: [0,1,2]).count == 3
+      self.winner = self.player_two
+      return true
+    end
+
+    return false
   end
 
 end

@@ -16,7 +16,7 @@ class GameboardsController < ApplicationController
   end
 
   def update
-
+    
   end
 
   def destroy
